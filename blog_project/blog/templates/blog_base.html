@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Application by Aniket Aryamane">
+    <meta name="author" content="Aniket Aryamane">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="apple-touch-icon" href="">
+
+    {% load static %}
+
+    <!-- Link to Materialize CSS file -->
+    <link rel="stylesheet" href="{% static 'blog/css/vendor/materialize/materialize.min.css' %}" type="text/css">
+
+    <!-- Link to your favicon.ico file -->
+    <link rel="shortcut icon" href="{% static 'blog/img/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Link to your css file -->
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}" type="text/css">
+
+</head>
+
+<body>
+<header>
+    <h1 class="center-align"><a href="{% url 'blog:home' %}">DJango Blog</a></h1>
+</header>
+
+{% block content %}{% endblock %}
+
+
+<!-- Link to Materialize JS file -->
+<script src="{% static 'blog/js/vendor/materialize/materialize.min.js' %}"></script>
+
+<!-- Link to your js file -->
+<script src="{% static 'blog/js/main.js' %}"></script>
+</body>
+
+</html>

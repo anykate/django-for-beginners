@@ -1,0 +1,19 @@
+{% extends 'blog_base.html' %}
+
+{% block title %}
+Blog | Home
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% for post in post_list %}
+    <div class="post-entry">
+        <a href="{% url 'blog:details' post_id=post.id %}"><h5>{{ post.title }}</h5></a>
+        <p>{{ post.body }}</p><br><br>
+        <hr>
+    </div>
+    {% empty %}
+        <h4 class="center-align">!!No posts - Database Empty!!</h4>
+    {% endfor %}
+</div>
+{% endblock %}
