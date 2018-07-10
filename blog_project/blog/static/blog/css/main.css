@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+}
+
+header h1 a{
+    color: red;
+}
+
+.post-entry a h5:hover {
+    color: #0f9d58;
+}
